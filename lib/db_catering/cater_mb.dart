@@ -24,7 +24,7 @@ class CaterMb extends GetView<PageLogic>{
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.dhaveyxc.value)),
+              url: WebUri.uri(Uri.parse(controller.ewvht.value)),
             ),
             onWebViewCreated: (c) {
               controller.webViewController = c;

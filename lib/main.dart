@@ -1,6 +1,8 @@
 import 'package:catering_management/db_catering/db_catering.dart';
 import 'package:catering_management/pages/catering_first/catering_first_binding.dart';
 import 'package:catering_management/pages/catering_first/catering_first_view.dart';
+import 'package:catering_management/pages/catering_man/cater_man_binding.dart';
+import 'package:catering_management/pages/catering_man/cater_man_view.dart';
 import 'package:catering_management/pages/catering_second/catering_second_binding.dart';
 import 'package:catering_management/pages/catering_second/catering_second_view.dart';
 import 'package:catering_management/pages/catering_tab/catering_tab_binding.dart';
@@ -10,6 +12,8 @@ import 'package:catering_management/pages/catering_third/catering_third_view.dar
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+
+import 'db_catering/cater_mb.dart';
 
 Color primaryColor = const Color(0xffff8900);
 Color bgColor = const Color(0xfff7f7f7);
@@ -32,7 +36,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       getPages: Goal,
-      initialRoute: '/cateringTab',
+      initialRoute: '/',
       theme: ThemeData(
         useMaterial3: true,
         primaryColor: primaryColor,
@@ -85,8 +89,10 @@ class MyApp extends StatelessWidget {
 }
 
 List<GetPage<dynamic>> Goal = [
+  GetPage(name: '/', page: () => const CaterManView(), binding: CaterManBinding()),
   GetPage(name: '/cateringTab', page: () => CateringTabPage(), binding: CateringTabBinding()),
   GetPage(name: '/cateringFirst', page: () => CateringFirstPage(), binding: CateringFirstBinding()),
   GetPage(name: '/cateringSecond', page: () => CateringSecondPage(), binding: CateringSecondBinding()),
+  GetPage(name: '/cateringSolo', page: () => const CaterMb()),
   GetPage(name: '/cateringThird', page: () => CateringThirdPage(), binding: CateringThirdBinding()),
 ];

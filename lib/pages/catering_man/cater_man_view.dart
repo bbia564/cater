@@ -11,7 +11,7 @@ class CaterManView extends GetView<PageLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.eichmann.value
+          () => controller.gerlach.value
               ? const CircularProgressIndicator(color: Colors.orange)
               : buildError(),
         ),
@@ -26,7 +26,7 @@ class CaterManView extends GetView<PageLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.bifhul();
+              controller.okfdxzpm();
             },
             icon: const Icon(
               Icons.restart_alt,
